@@ -1,0 +1,1 @@
+# ADB-Google-Emulator-Size-Changer
