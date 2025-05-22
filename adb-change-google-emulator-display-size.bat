@@ -74,14 +74,19 @@ cls
 goto MENU
 
 :FONT_SIZE
+cls
+echo.
 echo *-----------------------------------*
-echo ^|  Screen Size Options              ^|
+echo ^|  Font Size Options                ^|
 echo *-----------------------------------*
-echo ^|  1. Small: 0.85                   ^|
-echo ^|  2. Default: 1.0                  ^|
-echo ^|  3. Large: 1.15                   ^|
-echo ^|  4. Largest: 1.3                  ^|
-echo ^|  5. Extra: 2.0                     ^|
+echo ^| 1. SM:       0.85                 ^|
+echo ^| 2. Default:  1.00                 ^|
+echo ^| 3. LG:       1.15                 ^|
+echo ^| 4. XL:       1.30                 ^|
+echo ^| 5. XXL:      1.45                 ^|
+echo ^| 6. XXXL:     1.85                 ^|
+echo ^| 7. XXXXL:    2.00                 ^|
+echo ^| 0. Go Back                        ^|
 echo *-----------------------------------*
 echo.
 set /p option="Select Size: "
@@ -93,9 +98,16 @@ if "%option%"=="1" (
 ) else if "%option%"=="3" (
     set font_size=1.15
 ) else if "%option%"=="4" (
-    set font_size=1.3
+    set font_size=1.30
 ) else if "%option%"=="5" (
+    set font_size=1.45
+) else if "%option%"=="6" (
+    set font_size=1.85
+) else if "%option%"=="7" (
     set font_size=2.0
+) else if "%option%"=="0" (
+    cls
+    goto MENU
 ) else (
     echo Invalid option. Using default size 1.0
     set font_size=1.0
